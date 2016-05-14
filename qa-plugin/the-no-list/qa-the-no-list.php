@@ -61,7 +61,10 @@ class qa_the_no_list
 				unset($qa_content['navigation']['main'][$key]);
 		}
 
-		$qa_content['navigation']['main']['ask']['label'] =qa_lang_html('the-no-list/nav_ask');
+		$qa_content['navigation']['main']['ask']=array(
+			'url' => qa_path_html('the-no-list-ask'),
+			'label' => 'Add a #NObrand',
+		);
 
 		$page_content = qa_q_list_page_content(
 			$questions, // questions
